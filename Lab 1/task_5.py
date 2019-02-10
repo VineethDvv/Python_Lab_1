@@ -104,14 +104,8 @@ passenger1.set_passport_number('AA123456')
 print(passenger1.get_passport_number())
 
 #other way to print private variable(not recommended
-print(passenger1._Passenger__passport_number)   #not working properly
+#print(passenger1._Passenger__passport_number)   #not working properly
 
-#print(employee1.employeeID)
-#print(employee1.phone_number)
-
-#print(employee2.phone_number)
-
-#print(passenger1.luggage_weight)
 
 
 
