@@ -1,4 +1,4 @@
-
+#python code to find the longest substring
 def unique_longest_substring(input_string):
 #initialising the requried instances
   last_occurrence = {}
