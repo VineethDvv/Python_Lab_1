@@ -3,18 +3,6 @@ def Convert(tup, di):
         di.setdefault(a, []).append(b)
     return di
 
-# count = input("\nEnter number of tuples to be enterted\t-")
-# noTup = int(count)
-
-
-# for i in range(noTup):
-#     name = input("\nEnter the name\t-")
-#     subject = input("\nEnter the subject\t-")
-#     marks = input("\nEnter the marks\t-")
-#     tp = (name, (subject), int(marks))
-#     lt.append(tp)
-
-
 lt = []
 tp1 = ('John', ('Physics', 80))
 tp2 = ('Daniel', ('Science', 90))
