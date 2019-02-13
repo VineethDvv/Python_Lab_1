@@ -1,26 +1,36 @@
-def longestSubstring(self, word):
-    longest =0
-    currentLength = 0
 
-    if(len(word) > 0):
-        currentLength = 1
-        longest = 1
-        dict = {word[0] : 0}
-        i = 1
+def unique_longest_substring(input_string):
+#initialising the requried instances
+  last_occurrence = {}
+  longest_length = 0
+  longest_position = 0
+  starting_position = 0
+  current_length = 0
 
-        while i < len(word):
-            if (dict.has_key(word[i])):
-                i = dict[word[i]]+1
-                dict.clear()
-                if (longest < currentLength):
-                    longest= currentLength
-                currentLength = 0
-            else:
-                dict[word[i]] = i
-                currentLength = currentLength + 1
-                i = i + 1
+  for a, b in enumerate(input_string):
+    l = last_occurrence.get(b, -1)
+    # If no repetition within, no problems.
+    if l < starting_position:
+        current_length += 1
+    else:
+        # Check if it is the longest so far
+        if current_length > longest_length:
+            longest_position = starting_position
+            longest_length = current_length
+        # Cut the prefix that has repetition
+        current_length -= l - starting_position
+        starting_position = l + 1
+    # In any case, update last occurrence
+    last_occurrence[b] = a
 
-        if (longest < currentLength):
-            longest= currentLength
+  # if the longest substring is a suffix
+  if current_length > longest_length:
+    longest_position = starting_position
+    longest_length = current_length
 
-    return longest
+  return input_string[longest_position:longest_position + longest_length]
+
+
+input = 'vineeth'
+
+print(f"The Longest unique substring in '{input}' is '{unique_longest_substring(input)}' Size: {len(unique_longest_substring(input))}")
