@@ -11,7 +11,7 @@ while(choice != 4):
         Total_Amount = Total_Amount + int(Deposit)#adding deposit to total amount.
     elif (int(choice) == 2):
         Withdraw = input("Withdraw-\n")
-        Total_Amount = Total_Amount - int(Withdraw)
+        Total_Amount = Total_Amount - int(Withdraw)#subtracting withdraw amount from total amount
     elif (int(choice) == 3):
         print("Total Amount - ${0}".format(Total_Amount))
     else:
