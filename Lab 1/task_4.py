@@ -7,6 +7,7 @@ def unique_longest_substring(input_string):
   starting_position = 0
   current_length = 0
 
+
   for a, b in enumerate(input_string):
     l = last_occurrence.get(b, -1)
     # If no repetition within, no problems.
@@ -22,7 +23,6 @@ def unique_longest_substring(input_string):
         starting_position = l + 1
     # In any case, update last occurrence
     last_occurrence[b] = a
-
   # if the longest substring is a suffix
   if current_length > longest_length:
     longest_position = starting_position
@@ -31,6 +31,8 @@ def unique_longest_substring(input_string):
   return input_string[longest_position:longest_position + longest_length]
 
 
-input = 'vineeth'
+
+
+input = 'pwwkew'
 
 print(f"The Longest unique substring in '{input}' is '{unique_longest_substring(input)}' Size: {len(unique_longest_substring(input))}")
