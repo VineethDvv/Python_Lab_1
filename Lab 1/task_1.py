@@ -13,7 +13,7 @@ while(choice != 4):
         Withdraw = input("Withdraw-\n")
         Total_Amount = Total_Amount - int(Withdraw)#subtracting withdraw amount from total amount
     elif (int(choice) == 3):
-        print("Total Amount - ${0}".format(Total_Amount))
+        print("Total Amount - ${0}".format(Total_Amount))#printing total amount
     else:
         break
 
