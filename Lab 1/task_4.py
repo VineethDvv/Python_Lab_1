@@ -8,7 +8,7 @@ def unique_longest_substring(input_string):
   current_length = 0
 
 
-  for a, b in enumerate(input_string):
+  for a, b in enumerate(input_string): #iterating through the input string
     l = last_occurrence.get(b, -1)
     # If no repetition within, no problems.
     if l < starting_position:
