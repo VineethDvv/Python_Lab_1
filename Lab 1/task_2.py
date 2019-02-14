@@ -1,4 +1,4 @@
-def Convert(tup, di):
+def Convert(tup, di): #using a function to convert tup to dict
     for a, b in tup:
         di.setdefault(a, []).append(b)
     return di
@@ -12,15 +12,15 @@ tp5 = ('Daniel',('History',75))
 tp6 = ('Mark',('Social', 95))
 
 
-lt1 = [tp1,tp2,tp3,tp4,tp5,tp6]
+lt1 = [tp1,tp2,tp3,tp4,tp5,tp6] #list of tuples
 
-print(f"Tuple Form - {lt1}")
+print(f"Tuple Form - {lt1}") #printing in the tuple form
 
 dictionary = {}
 dict1 = Convert(lt1,dictionary)
 
 
-print(f"Dictionary Form - {dict1}")
+print(f"Dictionary Form - {dict1}") #printing the dict form
 
 
 
